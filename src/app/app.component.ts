@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ChatBotService } from './chat-bot.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +7,9 @@ import { ChatBotService } from './chat-bot.service';
 })
 export class AppComponent {
 
-  // showChatBot: boolean = false;
+  showChatBot: boolean = false;
 
-  constructor(public chatBotService: ChatBotService){
+  constructor(){
 
 
   }
@@ -21,6 +19,6 @@ export class AppComponent {
   }
 
   chatClick(){
-    this.chatBotService.showChatBot = true;
+    this.showChatBot = true;
   }
 }
